@@ -1,14 +1,270 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TokoKita — Demo Toko</title><link rel="stylesheet" href="style.css"></head><body>
-<header><a class="brand" href="#home">Toko<span>Kita</span></a><nav><a href="#produk">Produk</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a><a href="#produk">🛒 <b id="cartCount">0</b></a></nav></header>
-<main>
-<section id="home" class="hero"><div><p class="label">TOKO ONLINE • DEMO PORTOFOLIO</p><h1>Belanja simpel.<br><span>Pilih yang kamu suka.</span></h1><p class="desc">Demo toko online modern untuk menampilkan produk, harga, dan pemesanan dengan tampilan nyaman di HP.</p><a class="btn primary" href="#produk">Belanja Sekarang</a></div><div class="hero-art"><div class="bag">🛍️</div><div class="float">Gratis ongkir<br><strong>untuk demo</strong></div></div></section>
-<section id="produk" class="section"><p class="label">PRODUK PILIHAN</p><h2>Produk populer.</h2><div class="products">
-<article><div class="pic one">🎧</div><div class="info"><small>POPULER</small><h3>Headphone Wireless</h3><p>Suara jernih dengan desain nyaman.</p><strong>Rp149K</strong><button onclick="addCart()">Tambah ke Keranjang</button></div></article>
-<article><div class="pic two">⌚</div><div class="info"><small>NEW</small><h3>Smart Watch</h3><p>Teman aktivitas sehari-hari yang praktis.</p><strong>Rp199K</strong><button onclick="addCart()">Tambah ke Keranjang</button></div></article>
-<article><div class="pic three">🎒</div><div class="info"><small>BEST SELLER</small><h3>Tas Urban</h3><p>Tas simpel untuk sekolah dan aktivitas.</p><strong>Rp89K</strong><button onclick="addCart()">Tambah ke Keranjang</button></div></article>
-<article><div class="pic four">👟</div><div class="info"><small>SALE</small><h3>Sneakers Casual</h3><p>Ringan dan cocok untuk penggunaan harian.</p><strong>Rp179K</strong><button onclick="addCart()">Tambah ke Keranjang</button></div></article>
-</div></section>
-<section id="tentang" class="about"><div class="about-art">📦</div><div><p class="label">TENTANG TOKOKITA</p><h2>Belanja tanpa ribet.</h2><p class="muted">TokoKita adalah toko fiktif yang dibuat sebagai demo portofolio WebKita. Struktur ini dapat disesuaikan untuk toko sungguhan, termasuk produk, foto, harga, deskripsi, dan pemesanan.</p></div></section>
-<section class="features"><div>⚡<h3>Proses mudah</h3><p>Pilih produk dan hubungi toko.</p></div><div>📱<h3>Ramah HP</h3><p>Tampilan nyaman di perangkat mobile.</p></div><div>🛠️<h3>Bisa custom</h3><p>Desain dapat disesuaikan kebutuhan.</p></div></section>
-<section id="kontak" class="cta"><p class="label">TERTARIK MEMBUAT TOKO?</p><h2>Butuh website seperti ini?</h2><p>Demo ini adalah contoh kemampuan WebKita membuat website toko online.</p><a class="btn primary" href="https://wa.me/6283890390224?text=Halo%20WebKita%2C%20saya%20tertarik%20dengan%20demo%20website%20toko." target="_blank">Hubungi WebKita</a></section>
-</main><footer><strong>TokoKita.</strong><span>Demo portofolio WebKita • <span id="year"></span></span></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurantly X · Home V1</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">Restaurantly <span>X</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" class="btn-nav">Order Online</a></li>
+            </ul>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+
+                <!-- left -->
+                <div class="hero-content">
+                    <span class="hero-badge"><i class="fas fa-star" style="margin-right: 6px;"></i> California's Finest</span>
+                    <h1 class="hero-title heading-serif">
+                        The best food <br /><span class="highlight">experience</span> in California
+                    </h1>
+                    <p class="hero-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing eli ut drak
+                        atempus sit euismod aliquet nec atyu mi a neque.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary">Browse our menu</a>
+                        <a href="#" class="btn-outline"><i class="fas fa-play-circle"></i> Watch video</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">12+</span>
+                            <span class="stat-label">Years of excellence</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">Guest rating</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">28</span>
+                            <span class="stat-label">Award-winning dishes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right -->
+                <div class="hero-visual">
+                    <div class="hero-image-placeholder">
+                        <i class="fas fa-utensils"></i>
+                        <p>Signature dish<br /><span style="font-size:0.75rem; color:var(--text-muted);">— coming soon —</span></p>
+                        <span class="gold-dot"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCATION & HOURS ===== -->
+    <section class="section-info" id="locations">
+        <div class="container">
+            <div class="info-grid">
+
+                <!-- Locations -->
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-location-dot"></i></div>
+                    <h3 class="heading-serif">Locations</h3>
+                    <p class="address-line"><strong>4600 Rodeo Ln</strong><br />Los Angeles, California, CA</p>
+                    <p class="address-line" style="margin-top: 0.75rem;"><strong>2736 Worden St.</strong><br />San Diego, California, CA</p>
+                </div>
+
+                <!-- Open Hours -->
+                <div class="info-card">
+                    <div class="card-icon"><i class="far fa-clock"></i></div>
+                    <h3 class="heading-serif">Open Hours</h3>
+                    <div class="hours-grid">
+                        <span class="day">Mon – Fri</span>
+                        <span class="time">9 AM – 8 PM</span>
+                        <span class="day">Saturday</span>
+                        <span class="time gold">10 AM – 11 PM</span>
+                        <span class="day">Sunday</span>
+                        <span class="time gold">10 AM – 10 PM</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ORDER ===== -->
+    <section class="section-cta">
+        <div class="container">
+            <div class="cta-box">
+                <span class="section-tag"><i class="fas fa-store" style="margin-right: 6px;"></i> Order now</span>
+                <h2 class="heading-serif">Come or order online and experience <br class="hide-mobile" /> an unique culinary experience</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit et diam eu semper
+                    auctor metus amet nisl scelerisque rutrum suspendisse quis mauris sed sed arcu amet socis.
+                </p>
+                <div class="btn-group">
+                    <a href="#" class="btn-primary"><i class="fas fa-utensils" style="margin-right: 8px;"></i> Browse our menu</a>
+                    <a href="#" class="btn-outline"><i class="fas fa-truck" style="margin-right: 8px;"></i> Order online</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MENU PREVIEW ===== -->
+    <section class="section-menu" id="menu">
+        <div class="container text-center">
+            <span class="section-tag">Our selection</span>
+            <h2 class="section-title heading-serif">Browse our menu</h2>
+            <p class="section-subtitle">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit et diam eu semper auctor metus amet nisl scelerisqu.
+            </p>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-icon"><i class="fas fa-utensil-spoon"></i></div>
+                    <h4>Starters</h4>
+                    <p>Fresh &amp; seasonal</p>
+                    <span class="price">$12 – $24</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon"><i class="fas fa-bowl-food"></i></div>
+                    <h4>Main courses</h4>
+                    <p>Signature recipes</p>
+                    <span class="price">$28 – $56</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon"><i class="fas fa-wine-glass"></i></div>
+                    <h4>Wine &amp; bar</h4>
+                    <p>Curated selection</p>
+                    <span class="price">$14 – $48</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon"><i class="fas fa-cake"></i></div>
+                    <h4>Desserts</h4>
+                    <p>Handcrafted sweets</p>
+                    <span class="price">$10 – $18</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 2.5rem;">
+                <a href="#" class="btn-primary">View full menu <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEO / EXPERIENCE ===== -->
+    <section class="section-video" id="video">
+        <div class="container">
+            <div class="video-grid">
+
+                <div class="video-content">
+                    <span class="section-tag"><i class="fas fa-play" style="margin-right: 6px;"></i> Watch</span>
+                    <h2 class="heading-serif">Watch our experience video</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit et diam eu semper
+                        auctor metus amet nisl scelerisqu.
+                    </p>
+                    <a href="#" class="btn-outline"><i class="fas fa-play-circle" style="margin-right: 8px;"></i> Play video</a>
+                </div>
+
+                <div class="video-player" role="button" tabindex="0">
+                    <div class="play-btn"><i class="fas fa-play"></i></div>
+                    <span class="play-label">▶  Experience the taste</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section-testimonials" id="testimonials">
+        <div class="container text-center">
+            <span class="section-tag"><i class="fas fa-quote-left" style="margin-right: 6px;"></i> Testimonials</span>
+            <h2 class="section-title heading-serif">What our guests say</h2>
+            <p class="section-subtitle">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit erat eget porttitor tincidunt feugiat mi malesuada.
+            </p>
+
+            <div class="testimonial-grid">
+
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>“The best restaurant” — Lorem ipsum dolor sit amet consectetur adipiscing elit erat eget porttitor tincidunt feugiat mi malesuada libero sed mattis quis eget varius.</blockquote>
+                    <div class="author">
+                        <span class="author-name">Sophie Moore</span>
+                        <span class="author-location">Los Angeles, CA</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>“Simply delicious” — Lorem ipsum dolor sit amet consectetur adipiscing elit erat eget porttitor tincidunt feugiat mi malesuada libero sed mattis quis eget varius.</blockquote>
+                    <div class="author">
+                        <span class="author-name">Matt Cannon</span>
+                        <span class="author-location">San Diego, CA</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>“One of a kind restaurant” — Lorem ipsum dolor sit amet consectetur adipiscing elit erat eget porttitor tincidunt feugiat mi malesuada libero sed mattis quis eget varius.</blockquote>
+                    <div class="author">
+                        <span class="author-name">Andy Smith</span>
+                        <span class="author-location">San Francisco, CA</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Restaurantly <span style="color:var(--text-muted); font-weight:300;">X</span></div>
+            <p style="max-width:400px; margin:0 auto 0.5rem auto;">
+                The best food experience in California.
+            </p>
+            <div class="socials">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            </div>
+            <p style="font-size:0.75rem; opacity:0.5;">
+                &copy; 2026 Restaurantly X — All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
